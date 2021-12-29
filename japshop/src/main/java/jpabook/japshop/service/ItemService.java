@@ -1,5 +1,6 @@
 package jpabook.japshop.service;
 
+import jpabook.japshop.domain.OrderItem;
 import jpabook.japshop.domain.item.Item;
 import jpabook.japshop.repository.ItemRepository;
 import lombok.RequiredArgsConstructor;
@@ -27,4 +28,5 @@ public class ItemService {
     public Item findOne(Long itemId){
         return itemRepository.findOne(itemId);
     }
+
 }
