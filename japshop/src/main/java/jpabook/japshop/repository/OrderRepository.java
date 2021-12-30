@@ -44,7 +44,8 @@ public class OrderRepository {
     /**
      * jpql을 동적으로 문자로 생성하는 방법
      * 권하지 않는 방법, 문자열을 더한다는게 복잡하고 지저분하기 때문
-    public List<Order> findAll(OrderSearch orderSearch){
+     */
+    public List<Order> findAllByString(OrderSearch orderSearch){
 
         String jpql = "select o from Order o join o.member m";
         boolean isFirstCondition = true;
@@ -85,7 +86,7 @@ public class OrderRepository {
 
         return query.getResultList();
     }
-     */
+
 
     /**
      * JPA Criteria(JPA 표준 스펙에 있는 기술)
